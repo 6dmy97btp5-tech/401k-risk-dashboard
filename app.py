@@ -138,7 +138,7 @@ fig_fee = px.line(
     color="Expense Ratio",
     title="Fee Drag Over 30 Years — $100,000 Initial Investment at 7% Gross Return",
     labels={"Portfolio Value": "Portfolio Value ($)", "Year": "Years Invested"},
-    template="plotly_dark"
+    template="plotly_white"
 )
 fig_fee.update_layout(yaxis_tickformat="$,.0f", hovermode="x unified", height=500)
 st.plotly_chart(fig_fee, use_container_width=True)
@@ -171,7 +171,7 @@ fig_corr = px.imshow(
     color_continuous_scale="RdBu_r",
     zmin=-1, zmax=1,
     title="Asset Correlation Matrix — Daily Returns",
-    template="plotly_dark"
+    template="plotly_white"
 )
 fig_corr.update_layout(height=500, coloraxis_colorbar=dict(title="Correlation"))
 st.plotly_chart(fig_corr, use_container_width=True)
